@@ -47,7 +47,10 @@ function renderUiJson(jsonStr, elToRenderInside) {
       s+='<input type="checkbox" id='checkbox"+id+"'>\n'
       s+='<label for="checkbox'+id+'">'+htmlEncode(choice)+'</label><br>\n'
     }
+  } else {
+    throw 'Unexpected value "'+o.type+'" of "type" atrribute: jsonStr=' + jsonStr
   }
+  elToRenderInside.innerHTML = s
 }
 
 //https://stackoverflow.com/a/29482788/15814452
