@@ -1,6 +1,6 @@
 # About this repository
 
-TODO
+This repository is deployed using Github Pages, at: https://uijson1.github.io/uiJson/
 
 ## GitHub Pages
 
