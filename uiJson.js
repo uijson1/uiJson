@@ -44,7 +44,7 @@ function renderUiJson(jsonStr, elToRenderInside) {
         throw '"choices" attribute value must be array of strings: jsonStr=' + jsonStr
       }
       const id = nextId()
-      s+='<input type="checkbox" id='checkbox"+id+"'>\n'
+      s+='<input type="checkbox" id="checkbox'+id+'">\n'
       s+='<label for="checkbox'+id+'">'+htmlEncode(choice)+'</label><br>\n'
     }
   } else {
