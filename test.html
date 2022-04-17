@@ -38,7 +38,7 @@
   <script>
     const el = document.getElementById
   </script>
-  <button type="button" id="btn1" onclick="renderUiJson(el('ta1').value,'div1')">Render</button><br>
+  <button type="button" id="btn1" onclick="alert('a1');const o=el('ta1');alert('a2');renderUiJson(o, 'div1')">Render</button><br>
   <div id="div1"></div>
 
 </body>
