@@ -50,6 +50,7 @@ function renderUiJson(jsonStr, elToRenderInside) {
   } else {
     throw 'Unexpected value "'+o.type+'" of "type" atrribute: jsonStr=' + jsonStr
   }
+  console.log('s='+s)
   elToRenderInside.innerHTML = s
 }
 
