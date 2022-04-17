@@ -35,17 +35,7 @@
     choices = ["Yes","No"]
     }
   </textarea><br>
-  <script>
-    const el = document.getElementById
-    const const1 = 'abc'
-    let ooo = document.getElementById('ta1')
-    if(ooo!=null) {
-      alert('PASS')
-    } else {
-      alert('FAIL')
-    }
-  </script>
-  <button type="button" id="btn1" onclick="alert(const1);alert('a1');alert(typeof(el));const o=document.getElementById('ta1');alert('a2');renderUiJson(o, 'div1')">Render</button><br>
+  <button type="button" id="btn1" onclick="renderUiJson(document.getElementById('ta1'), 'div1')">Render</button><br>
   <div id="div1"></div>
 
 </body>
