@@ -11,7 +11,7 @@ function renderUiJson(jsonStr, elToRenderInside) {
   if(o.title==null) {
     throw '"title" is missing: jsonStr=' + jsonStr
   }
-  const name = htmlEncode(title)
+  const name = htmlEncode(o.title)
   s+='<h3>'+htmlEncode(o.title)+'</h3>\n'
   if(o.description != null) {
     s+=''+htmlEncode(o.description)+'<br><br>'
