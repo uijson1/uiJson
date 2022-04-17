@@ -34,7 +34,7 @@ function renderUiJson(jsonStr, elToRenderInside) {
         throw '"choices" attribute value must be array of strings: jsonStr=' + jsonStr
       }
       const id = nextId()
-      s+='<input type="radio" name="'+name+'" id='radio"+id+"'>\n'
+      s+='<input type="radio" name="'+name+'" id="radio'+id+'">\n'
       s+='<label for="radio'+id+'">'+htmlEncode(choice)+'</label><br>\n'
     }
   } else if(o.type=='multiple choice') {
