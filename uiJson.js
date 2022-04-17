@@ -30,7 +30,7 @@ function renderUiJson(jsonStr, elToRenderInside) {
   if(o.type=='single choice') {
     for(let i=0;i<o.choices.length;i++) {
       const choice = o.choices[i]
-      if(!(typeof o == 'string')) {
+      if(!(typeof choice == 'string')) {
         throw '"choices" attribute value must be array of strings: jsonStr=' + jsonStr
       }
       const id = nextId()
