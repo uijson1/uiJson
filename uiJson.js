@@ -56,7 +56,7 @@ function renderUiJson(jsonStr, elToRenderInside) {
 //https://stackoverflow.com/a/29482788/15814452
 function htmlEncode (value) {
   var p = document.createElement("p");
-  p.textContent = str;
+  p.textContent = value;
   return p.innerHTML;
 }
 
