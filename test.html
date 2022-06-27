@@ -29,10 +29,13 @@
   <br>
   JSON to render:<br>
   <textarea id="ta1">
+    {"type":"components on separate lines",
+    "components":[
     {
     "type":"single choice",
     "title":"Should A and B be reunited?",
     "choices": ["Yes","No"]
+    }]
     }
   </textarea><br>
   <button type="button" id="btn1" onclick="renderUiJson(document.getElementById('ta1').value, document.getElementById('div1'))">Render</button><br>
