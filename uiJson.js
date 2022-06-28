@@ -74,7 +74,7 @@ function renderUi(o, elToRenderInside) {
       ctr++
       renderUi(component, elToRenderInside)
       if(ctr!=o.components.length) {
-        elToRenderInside.insertAdjacentHTML('beforeend', <hr>)      
+        elToRenderInside.insertAdjacentHTML('beforeend', '<hr>')      
       }
     }
   }
