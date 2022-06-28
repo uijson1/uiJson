@@ -25,6 +25,12 @@
     import {renderUiJson} from './uiJson.js';
     const el = (id)=>document.getElementById(id);
     el('btn1').addEventListener('click',()=>renderUiJson(el('ta1').value, el('div1')));
+    const adjustTaHeight = (taId) => {
+      const ta = el(taId);
+      ta.height = ta.scrollHeight;
+      ta.addEventListener('input',()=>{ta.height = ta.scrollHeight});
+    };
+    adjustTaHeight('ta1');
   </script>
 </head>
 
@@ -32,7 +38,7 @@
   Source code location: <a href="https://github.com/uijson1/uiJson/blob/main/test.html">here</a>. <br>
   <br>
   JSON to render:<br>
-  <textarea id="ta1">    
+  <textarea id="ta1" style="width:100%;">
 {
   "type": "components on separate lines",
   "title": "Test Components",
