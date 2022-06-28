@@ -1,20 +1,21 @@
 /**
 @param {string} jsonStr
 */
-function renderUiJson(jsonStr, elToRenderInside) {
+export function renderUiJson(jsonStr, elToRenderInside) {
   const o = JSON.parse(jsonStr);
   if (o.type == null) {
     throw new Error('"type" attribute missing: jsonStr=' + jsonStr);
   }
   o.type = o.type.toLowerCase();
   let s = "";
+  // every component must have a title. It can also have an optional description.
   if (o.title == null) {
-    throw new Error('"title" is missing: jsonStr=' + jsonStr);
+    throw new Error('Attribute "title" is missing for the folloewing component: ' + jsonStr);
   }
   const name = htmlEncode(o.title);
   s += "<h3>" + htmlEncode(o.title) + "</h3>\n";
   if (o.description != null) {
-    s += "" + htmlEncode(o.description) + "<br><br>";
+    s += htmlEncode(o.description) + "<br><br>";
   }
   if (o.type == "single choice" || o.type == "multiple choice") {
     if (o.choices == null) {
