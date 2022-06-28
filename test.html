@@ -28,6 +28,7 @@
     const adjustTaHeight = (taId) => {
       const ta = el(taId);
       ta.height = ta.scrollHeight;
+      console.log('After setting ta height, it is '+ta.height+', whereas scrollHeight='+ta.scrollHeight);
       ta.addEventListener('input',()=>{ta.height = ta.scrollHeight});
       setTimeout(()=>{ta.height = ta.scrollHeight},1000);
       setInterval(()=>{ta.height = ta.scrollHeight},10000);
