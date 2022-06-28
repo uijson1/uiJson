@@ -21,7 +21,11 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="stylesheet" href="styles.css?v=1.0">
-  <script src="uiJson.js"></script>
+  <script type = "module">
+    import {renderUiJson} from './uiJson.js';
+    const el = (id)=>document.getElementById(id);
+    el('btn1').addEventListener('click',()=>renderUiJson(el('ta1').value, el('div1')));
+  </script>
 </head>
 
 <body>
@@ -46,7 +50,7 @@
   ]
 }
   </textarea><br>
-  <button type="button" id="btn1" onclick="renderUiJson(document.getElementById('ta1').value, document.getElementById('div1'))">Render</button><br>
+  <button type="button" id="btn1">Render</button><br>
   <div id="div1"></div>
 
 </body>
