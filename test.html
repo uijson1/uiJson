@@ -6,11 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>A Basic HTML5 Template</title>
-  <meta name="description" content="A simple HTML5 Template for new projects.">
-  <meta name="author" content="SitePoint">
+  <title>/UI JSON Test Page</title>
+  <meta name="description" content="UI JSON Test Page">
+  <meta name="author" content="uiJson1@gmail.com">
 
-  <meta property="og:title" content="A Basic HTML5 Template">
+  <meta property="og:title" content="UI JSON Test Page">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
   <meta property="og:description" content="A simple HTML5 Template for new projects.">
@@ -28,15 +28,23 @@
   Source code location: <a href="https://github.com/uijson1/uiJson/blob/main/test.html">here</a>. <br>
   <br>
   JSON to render:<br>
-  <textarea id="ta1">
-    {"type":"components on separate lines",
-    "components":[
+  <textarea id="ta1">    
+{
+  "type": "components on separate lines",
+  "title": "Test Components",
+  "components": [
     {
-    "type":"single choice",
-    "title":"Should A and B be reunited?",
-    "choices": ["Yes","No"]
-    }]
+      "type": "single choice",
+      "title": "Should A and B be reunited?",
+      "choices": ["Yes", "No"]
+    },
+    {
+      "type": "single choice",
+      "title": "Should C and D be reunited?",
+      "choices": ["Yes", "No"]
     }
+  ]
+}
   </textarea><br>
   <button type="button" id="btn1" onclick="renderUiJson(document.getElementById('ta1').value, document.getElementById('div1'))">Render</button><br>
   <div id="div1"></div>
