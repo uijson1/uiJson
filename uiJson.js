@@ -3,6 +3,10 @@
 */
 export function renderUiJson(jsonStr, elToRenderInside) {
   const o = JSON.parse(jsonStr);
+  renderUi(o, elToRenderInside);
+}
+
+function renderUi(o, elToRenderInside) {
   if (o.type == null) {
     throw new Error('"type" attribute missing: jsonStr=' + jsonStr);
   }
@@ -64,7 +68,17 @@ export function renderUiJson(jsonStr, elToRenderInside) {
         htmlEncode(choice) +
         "</label><br>\n";
     }
-  } else {
+  } else if(o.type=='components on separate lines')  {
+    let ctr=0
+    for(const component of o.components) {
+      ctr++
+      renderUi(component, elToRenderInside)
+      if(ctr!=o.components.length) {
+        elToRenderInside.insertAdjacentHTML('beforeend', <hr>)      
+      }
+    }
+  }
+  else {
     throw new Error(
       'Unexpected value "' +
         o.type +
@@ -75,7 +89,7 @@ export function renderUiJson(jsonStr, elToRenderInside) {
   console.log("s=" + s);
   console.log('elToRenderInside==null=',elToRenderInside==null)
   console.log("innerHTML 1=" + elToRenderInside.innerHTML);
-  elToRenderInside.innerHTML = s;
+  elToRenderInside.insertAdjacentHTML('beforeend', s)
   console.log("innerHTML 2=" + elToRenderInside.innerHTML);
 }
 
