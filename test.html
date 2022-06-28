@@ -29,6 +29,8 @@
       const ta = el(taId);
       ta.height = ta.scrollHeight;
       ta.addEventListener('input',()=>{ta.height = ta.scrollHeight});
+      setTimeout(()=>{ta.height = ta.scrollHeight},1000);
+      setInterval(()=>{ta.height = ta.scrollHeight},10000);
     };
     adjustTaHeight('ta1');
   </script>
