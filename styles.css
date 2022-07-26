@@ -1,0 +1,12 @@
+* {
+  font-family: "arial";
+}
+
+body {
+  padding: 5px;
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
